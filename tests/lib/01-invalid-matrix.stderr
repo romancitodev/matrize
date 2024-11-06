@@ -1,0 +1,18 @@
+error[E0599]: no function or associated item named `square` found for struct `matrize::Matrix<1, 2>` in the current scope
+ --> ./tests/lib/01-invalid-matrix.rs:4:29
+  |
+4 |     let _ = Matrix::<1, 2>::square(1);
+  |                             ^^^^^^ function or associated item not found in `Matrix<1, 2>`
+  |
+note: if you're trying to build a new `matrize::Matrix<1, 2>` consider using one of the following associated functions:
+      matrize::Matrix::<N, M, E>::new
+      matrize::Matrix::<N, M, E>::zeros
+  --> src/lib.rs
+   |
+   |     pub const fn new(value: E) -> Matrix<N, M, E> {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+   |     pub const fn zeros() -> Matrix<N, M, E> {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   = note: the function or associated item was found for
+           - `matrize::Matrix<N, N, E>`
