@@ -57,8 +57,4 @@ impl<const N: usize, const M: usize, E: IsNumber + Default + Copy> Matrix<N, M, 
     pub const fn columns(&self) -> usize {
         M
     }
-
-    pub fn say_hi(&self) {
-        println!("Hi from this matrix");
-    }
 }
