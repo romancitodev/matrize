@@ -10,6 +10,6 @@ fn main() {
     let manual = matrix![[[1, 2, 3], [4, 5, 6]]];
     let squared = Matrix::<2, 2>::square(1);
     let rows = squared.rows();
+
     println!("{squared:?}");
-    manual.say_hi();
 }
