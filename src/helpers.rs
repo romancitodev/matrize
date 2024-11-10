@@ -17,7 +17,7 @@ macro_rules! matrix {
         }
     }};
 }
-//
+
 // check if is a number, check at compile time
 pub trait IsNumber {
     const ZERO: Self;
@@ -35,4 +35,4 @@ macro_rules! impl_trait {
     };
 }
 
-impl_trait!(IsNumber, [usize isize u8 i8 i32 u32 i64 u64]);
+impl_trait!(IsNumber, [usize isize u8 i8 u16 i16 i32 u32 i64 u64]);
