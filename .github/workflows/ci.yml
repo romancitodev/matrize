@@ -7,21 +7,16 @@ on:
     types: [opened, synchronize, reopened, edited]
 
 permissions:
-  pull-requests: write # para que el bot pueda comentar
+  pull-requests: write
   contents: read
 
 env:
   CARGO_TERM_COLOR: always
   RUSTFLAGS: "-Dwarnings"
 
-# ─── Flags en la PRIMERA LÍNEA del body del PR ───────────────────────────────
-#
-#   !execute              → corre tests y sube coverage a Codecov
-#   !execute --skip-tests → compila pero omite tests/coverage
-#   (nada)                → solo verifica que compila
-#
-# ─────────────────────────────────────────────────────────────────────────────
-
 jobs:
   ci:
     uses: romancitodev/workflows/.github/workflows/rust-ci.yml@main
+    with:
+      strict-mode: true
+      cargo-test-flags: "--lib"
