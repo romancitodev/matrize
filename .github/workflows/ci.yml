@@ -24,4 +24,4 @@ env:
 
 jobs:
   ci:
-    uses: romancitodev/workflows/.github/workflows/rust/ci.yml@main
+    uses: romancitodev/workflows/.github/workflows/rust-ci.yml@main
