@@ -216,6 +216,12 @@ mod tests {
             assert_ne!(ad.rows(), da.rows());
             assert_ne!(ad.columns(), da.columns());
         }
+
+        #[test]
+        fn failing_test() {
+            let result = 1 + 1;
+            assert_eq!(result, 3);
+        }
     }
 }
 
