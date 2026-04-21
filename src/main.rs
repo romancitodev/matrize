@@ -8,5 +8,4 @@ fn main() {
         Some(x) => println!("Solucion: {x:?}"),
         None => println!("No hay solucion"),
     };
-
 }
